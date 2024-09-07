@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import SectionTitle from "../../components/SectionTitle";
-import { experience } from "../../resources/experience";
+import { useSelector } from "react-redux";
 
 function Experience() {
   const [selectedItemIndex, setSelectedItemIndex] = useState(0);
+  const { portfolioData } = useSelector((state) => state.root);
+  const { experience } = portfolioData;
 
   return (
     <div className="my-16">
