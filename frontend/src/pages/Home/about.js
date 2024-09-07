@@ -1,20 +1,12 @@
 import React from "react";
 import SectionTitle from "../../components/SectionTitle";
 import Sampple from "../../images/Sampple.png";
+import { useSelector } from "react-redux";
 
 const About = () => {
-  const skills = [
-    "Html",
-    "Css",
-    "JavaScript",
-    "React",
-    "Node",
-    "Express",
-    "MongoDb",
-    "MsSql",
-    "Asp.Net Mvc",
-    "AWS",
-  ];
+  const { portfolioData } = useSelector((state) => state.root);
+  const { about } = portfolioData;
+  const { skills, description1, description2 } = about;
 
   return (
     <div>
@@ -24,21 +16,9 @@ const About = () => {
           <img src={Sampple} alt="sample" />
         </div>
         <div className="flex items-center flex-col gap-8 my-8 w-1/2 sm:w-full">
-          <p className="text-white">
-            Hello! I’m Enis, a dedicated software developer with a passion for
-            creating innovative and efficient solutions. My journey in the tech
-            world began with a fascination for how things work live in the
-            internet.
-          </p>
+          <p className="text-white">{description1 || ""}</p>
 
-          <p className="text-white">
-            I graduated from University of Bussiness and Technology, where I
-            developed a solid foundation in Software Development. I strive to
-            write clean, maintainable code while always seeking to learn and
-            adapt to new challenges. I value transparency and open
-            communication, which I find essential for successful teamwork and
-            project outcomes.
-          </p>
+          <p className="text-white">{description2 || ""}</p>
         </div>
       </div>
       <div className="py-2">

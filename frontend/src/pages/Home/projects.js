@@ -1,16 +1,18 @@
 import React, { useState } from "react";
 import SectionTitle from "../../components/SectionTitle";
-import { projects } from "../../resources/projects";
+import { useSelector } from "react-redux";
 
 const Projects = () => {
   const [selectedItemIndex, setSelectedItemIndex] = useState(0);
+  const { portfolioData } = useSelector((state) => state.root);
+  const { project } = portfolioData;
 
   return (
     <div className="mt-20">
       <SectionTitle title="Projects" />
       <div className="flex py-16 gap-20 sm:flex-col">
         <div className="flex flex-col gap-10 w-2/5 sm:flex-row sm:overflow-x-scroll sm:w-full">
-          {projects.map((project, index) => (
+          {project.map((projects, index) => (
             <div
               onClick={() => {
                 setSelectedItemIndex(index);
@@ -24,7 +26,7 @@ const Projects = () => {
                     : " text-white "
                 }`}
               >
-                {project.title}
+                {projects.title}
               </h1>
             </div>
           ))}
@@ -32,11 +34,9 @@ const Projects = () => {
 
         <div className="flex flex-col gap-10 sm:flex-row sm:overflow--x-scroll sm:w-full">
           <h1 className="text-secondary text-xl">
-            {projects[selectedItemIndex].title}
+            {project[selectedItemIndex].title}
           </h1>
-          <p className="text-white">
-            {projects[selectedItemIndex].description}
-          </p>
+          <p className="text-white">{project[selectedItemIndex].description}</p>
         </div>
       </div>
     </div>
