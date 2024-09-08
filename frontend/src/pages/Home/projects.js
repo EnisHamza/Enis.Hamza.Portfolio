@@ -28,6 +28,7 @@ const Projects = () => {
               >
                 {projects.title}
               </h1>
+              <img src={project.image} alt="Image" className="h-62 w-80" />
             </div>
           ))}
         </div>

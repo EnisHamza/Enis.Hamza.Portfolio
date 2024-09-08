@@ -2,7 +2,7 @@ import React from "react";
 
 const Header = () => {
   return (
-    <div className="p-5 bg-primary flex">
+    <div className="p-5 bg-primary flex header">
       <a className="flex flex-row" href="/">
         <p
           className="text-tertiary text-2xl font-semibold font-serif"

@@ -68,6 +68,11 @@ i:hover {
   animation: e 1s infinite;
 }
 
+.header p {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
 @keyframes e {
   0% {
     opacity: 0.5;
@@ -78,4 +83,22 @@ i:hover {
   100% {
     opacity: 1;
   }
+}
+
+input,
+textarea {
+  height: 40px;
+  border: 1px solid gray;
+  width: 100%;
+  padding-left: 20px;
+}
+
+input:focus {
+  outline: none;
+  border: 2px solid rgb(56, 56, 56);
+}
+
+textarea {
+  height: 100px;
+  padding-top: 10px;
 }
