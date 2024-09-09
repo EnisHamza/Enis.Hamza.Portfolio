@@ -9,6 +9,8 @@ const {
   Contact,
 } = require("../models/portfolioModel"); // Import your models
 
+const User = require("../models/userModel");
+
 // Define your routes
 router.get("/get-portfolio-data", async (req, res) => {
   try {
@@ -147,6 +149,47 @@ router.post("/delete-project", async (req, res) => {
       success: true,
       message: "Project Deleted Successfully",
     });
+  } catch (error) {
+    res.status(500).send(error);
+  }
+});
+
+router.post("/update-contact", async (req, res) => {
+  try {
+    const contact = await Contact.findOneAndUpdate(
+      { _id: req.body._id },
+      req.body,
+      { new: true }
+    );
+    res.status(200).send({
+      data: contact,
+      success: true,
+      message: "Contact Updated Successfully",
+    });
+  } catch (error) {
+    res.status(500).send(error);
+  }
+});
+
+router.post("/admin-login", async (req, res) => {
+  try {
+    const user = await User.findOne({
+      username: req.body.username,
+      password: req.body.password,
+    });
+    if (user) {
+      res.status(200).send({
+        data: user,
+        success: true,
+        message: "Login Successfully",
+      });
+    } else {
+      res.status(200).send({
+        data: user,
+        success: false,
+        message: "Invalid username or password",
+      });
+    }
   } catch (error) {
     res.status(500).send(error);
   }

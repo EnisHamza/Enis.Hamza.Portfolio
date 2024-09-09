@@ -14,6 +14,8 @@ function AdminProjects() {
 
   const onFinish = async (values) => {
     try {
+      const tempTechnologies = values?.technologies?.split(", ") || [];
+      values.technologies = tempTechnologies;
       dispatch(ShowLoading());
       let response;
       if (selectedItemForEdit) {
@@ -73,7 +75,7 @@ function AdminProjects() {
           Add Project
         </button>
       </div>
-      <div className="grid grid-cols-4 gap-5">
+      <div className="grid grid-cols-4 gap-5 sm:grid-cols-1 sm:mt-2">
         {project.map((projects) => (
           <div className="shadow border p-5 border-gray-400 flex flex-col ">
             <div className="flex flex-col flex-grow">
@@ -82,7 +84,7 @@ function AdminProjects() {
               </h1>
               <hr />
               <br />
-              <img src={projects.image} alt="Image" className="h-62 w-80" />
+              <img src={projects.image} alt="pic" className="h-62 w-80" />
               <h1> Role : {projects.title}</h1>
               <h1>{projects.description}</h1>
             </div>
@@ -126,7 +128,7 @@ function AdminProjects() {
             initialValues={
               {
                 ...selectedItemForEdit,
-                technologies: selectedItemForEdit?.technologies.join(", "),
+                technologies: selectedItemForEdit?.technologies?.join(", "),
               } || {}
             }
           >
@@ -138,6 +140,9 @@ function AdminProjects() {
             </Form.Item>
             <Form.Item name="description" label="Description">
               <textarea placeholder="Description" />
+            </Form.Item>
+            <Form.Item name="link" label="Link">
+              <textarea placeholder="Link" />
             </Form.Item>
 
             <Form.Item name="technologies" label="Technologies">

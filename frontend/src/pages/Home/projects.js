@@ -10,8 +10,8 @@ const Projects = () => {
   return (
     <div className="mt-20">
       <SectionTitle title="Projects" />
-      <div className="flex py-16 gap-20 sm:flex-col">
-        <div className="flex flex-col gap-10 w-2/5 sm:flex-row sm:overflow-x-scroll sm:w-full">
+      <div className="flex py-10 gap-6 sm:flex-col">
+        <div className="flex flex-col gap-6 w-4/12 sm:flex-row sm:overflow-x-scroll sm:w-full">
           {project.map((projects, index) => (
             <div
               onClick={() => {
@@ -28,16 +28,16 @@ const Projects = () => {
               >
                 {projects.title}
               </h1>
-              <img src={project.image} alt="Image" className="h-62 w-80" />
             </div>
           ))}
         </div>
 
-        <div className="flex flex-col gap-10 sm:flex-row sm:overflow--x-scroll sm:w-full">
-          <h1 className="text-secondary text-xl">
-            {project[selectedItemIndex].title}
-          </h1>
-          <p className="text-white">{project[selectedItemIndex].description}</p>
+        <div className="flex items-center justify-center gap-10 sm:justify-center">
+          <img
+            src={project[selectedItemIndex].image}
+            alt="image"
+            className="h-60 w-72"
+          />
         </div>
       </div>
     </div>
