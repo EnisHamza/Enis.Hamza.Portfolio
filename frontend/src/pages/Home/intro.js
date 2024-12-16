@@ -1,25 +1,23 @@
 import React from "react";
 import me from "../../images/me.png";
-import { useSelector } from "react-redux";
 
 const Intro = () => {
-  const { portfolioData } = useSelector((state) => state.root);
-  const { intro } = portfolioData;
-  const { firstName, lastName, welcomeText, description, caption } = intro;
-
   return (
-    <div className="h-[80vh] bg-primary flex items-center justify-between px-1">
+    <div className="h-[80vh] bg-primary flex flex-row sm:flex-col items-center justify-between px-3 sm:mb-32">
       {/* Content Section */}
-      <div className="flex flex-col items-start gap-8 w-2/3">
-        <h1 className="text-white">{welcomeText || ``}</h1>
+      <div className="flex flex-col items-start gap-8 w-full sm:w-2/3 sm:mt-2">
+        <h1 className="text-white">Hi, I am</h1>
         <h1 className="text-7xl sm:text-3xl text-secondary font-semibold">
-          {firstName || ""} {lastName || ""}
+          Enis Hamza
         </h1>
         <h1 className="text-5xl sm:text-3xl text-tertiary font-semibold">
-          {caption || ""}
+          Welcome to My Portfolio
         </h1>
-        <p className="text-white">{description || ""}</p>
-        <div className="flex items-center space-x-12 py-4">
+        <p className="text-white">
+          Freshly graduate of Computer Science and Engineering with passion
+          working across the full stack of Software Development.
+        </p>
+        <div className="flex items-center space-x-12 py-4 sm:mx-auto">
           <a
             href="/EnisHamza.pdf"
             download="EnisHamza_CV.pdf"
@@ -31,7 +29,7 @@ const Intro = () => {
       </div>
 
       {/* Image Section */}
-      <div className="w-1/3">
+      <div className="w-2/3 sm:w-3/6">
         <img
           src={me}
           alt="Your description"

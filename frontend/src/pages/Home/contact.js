@@ -1,31 +1,43 @@
 import React from "react";
 import SectionTitle from "../../components/SectionTitle";
 import example from "../../images/example.png";
-import { useSelector } from "react-redux";
 
 const Contact = () => {
-  const { portfolioData } = useSelector((state) => state.root);
-  const { contact } = portfolioData;
+  const user = {
+    name: "Enis Hamza",
+    age: 22,
+    gender: "Male",
+    email: "Eniss.hamza@gmail.com",
+    mobile: "+383 (49)-607-665",
+    country: "Kosova",
+  };
 
   return (
     <div className="mt-20">
       <SectionTitle title="Meet Me" />
-      <div className="flex sm:flex-col">
-        <div className="flex flex-col sm:items-center sm:ml-0 mt-10 gap-4 ml-32">
-          <h1 className="text-secondary text-xl text-bold">{`{`}</h1>
-          {Object.keys(contact).map(
+      <div className="flex flex-row items-center mx-4 px-4 sm:items-center sm:flex-col">
+        {/* User Info Section */}
+        <div className="flex flex-col items-center lg:text-center lg:w-full h-auto gap-4 sm:items-center sm:ml-0 mt-10">
+          <h1 className="text-secondary text-xl font-bold">{`{`}</h1>
+          {Object.keys(user).map(
             (key) =>
               key !== "_id" && (
                 <h1 className="ml-8">
                   <span className="text-white">{key} : </span>
-                  <span className="text-tertiary">{contact[key]},</span>
+                  <span className="text-tertiary">{user[key]},</span>
                 </h1>
               )
           )}
-          <h1 className="text-secondary text-xl text-bold">{`}`}</h1>
+          <h1 className="text-secondary text-xl font-bold">{`}`}</h1>
         </div>
-        <div className="flex-1 mt-24 ml-28 flex justify-center items-center sm:ml-0 sm-items-center">
-          <img src={example} alt="example" className="w-full h-auto max-w-md" />
+
+        {/* Image Section */}
+        <div className=" mt-10 ml-28 flex justify-center items-center w-full sm:ml-0 sm:items-center">
+          <img
+            src={example}
+            alt="example"
+            className="w-full h-auto max-w-md object-cover rounded-lg"
+          />
         </div>
       </div>
     </div>
