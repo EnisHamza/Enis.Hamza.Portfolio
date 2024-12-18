@@ -1,12 +1,9 @@
 import React, { useState } from "react";
 import SectionTitle from "../../components/SectionTitle";
 import { projects } from "../../resources/projects";
-import { useSelector } from "react-redux";
 
 const Projects = () => {
   const [selectedItemIndex, setSelectedItemIndex] = useState(0);
-  /*const { portfolioData } = useSelector((state) => state.root);
-  const { project } = portfolioData;*/
 
   return (
     <div className="">
@@ -15,6 +12,7 @@ const Projects = () => {
         <div className="flex flex-row border-t-4 overflow-x-scroll border-[#135e4c82] justify-around sm:flex-row sm:overflow-x-scroll sm:w-full">
           {projects.map((project, index) => (
             <div
+              key={project.title} // Added key prop here
               onClick={() => {
                 setSelectedItemIndex(index);
               }}
@@ -35,7 +33,7 @@ const Projects = () => {
         <div className="flex flex-row py-20 justify-center gap-10 sm:justify-center">
           <img
             src={projects[selectedItemIndex].image}
-            alt="image"
+            alt="projekt"
             className="h-full w-4/6 border rounded-xl"
           />
         </div>

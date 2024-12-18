@@ -1,13 +1,8 @@
 import React from "react";
 import SectionTitle from "../../components/SectionTitle";
 import Sampple from "../../images/Sampple.png";
-import { useSelector } from "react-redux";
 
 const About = () => {
-  /*const { portfolioData } = useSelector((state) => state.root);
-  const { about } = portfolioData;
-  const { skills, description1, description2 } = about;*/
-
   const skills = [
     "Html",
     "Css",
@@ -33,7 +28,7 @@ const About = () => {
           />
         </div>
         {/* Text Section */}
-        <div className="flex items-center flex-col gap-8 my-8 w-1/2 sm:w-full sm:h-auto sm:mt-8">
+        <div className="flex items-center flex-col gap-8 my-24 w-1/2 sm:w-full sm:h-auto sm:mt-8">
           <p className="text-white">
             Hello! I’m Enis, a dedicated software developer with a passion for
             creating innovative and efficient solutions. My journey in the tech

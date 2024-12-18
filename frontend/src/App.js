@@ -4,6 +4,7 @@ import Home from "./pages/Home/index";
 import Loader from "./components/Loader";
 
 function App() {
+  //eslint-disable-next-line
   const [showLoading, setShowLoading] = useState(false);
 
   return (

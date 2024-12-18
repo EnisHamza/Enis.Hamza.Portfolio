@@ -22,7 +22,7 @@ const Contact = () => {
           {Object.keys(user).map(
             (key) =>
               key !== "_id" && (
-                <h1 className="ml-8">
+                <h1 key={key} className="ml-8">
                   <span className="text-white">{key} : </span>
                   <span className="text-tertiary">{user[key]},</span>
                 </h1>

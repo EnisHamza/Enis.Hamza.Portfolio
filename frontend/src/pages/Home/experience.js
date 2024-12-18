@@ -1,12 +1,9 @@
 import React, { useState } from "react";
 import SectionTitle from "../../components/SectionTitle";
 import { experience } from "../../resources/experience";
-import { useSelector } from "react-redux";
 
 function Experience() {
   const [selectedItemIndex, setSelectedItemIndex] = useState(0);
-  /*const { portfolioData } = useSelector((state) => state.root);
-  const { experience } = portfolioData;*/
 
   return (
     <div className="my-0">
@@ -14,8 +11,9 @@ function Experience() {
 
       <div className="flex py-0 gap-20 sm:flex-col">
         <div className="flex flex-col gap-10 w-3/5 sm:flex-row sm:overflow-x-scroll sm:w-full">
-          {experience.map((experience, index) => (
+          {experience.map((exp, index) => (
             <div
+              key={exp.period} // Added key prop here
               onClick={() => {
                 setSelectedItemIndex(index);
               }}
@@ -28,7 +26,7 @@ function Experience() {
                     : " text-white "
                 }`}
               >
-                {experience.period}
+                {exp.period}
               </h1>
             </div>
           ))}

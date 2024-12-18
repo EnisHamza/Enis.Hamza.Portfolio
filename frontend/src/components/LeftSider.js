@@ -3,7 +3,7 @@ import React from "react";
 //Left Sider with icons
 const LeftSider = () => {
   return (
-    <div className="fixed left-0 bottom-0 px-10 sm:static">
+    <div className="fixed left-0 bottom-0 px-6 sm:static">
       <div className="flex flex-col items-center">
         <div className="flex flex-col gap-3 sm:flex-row sm:mb-3">
           <a href="https://www.facebook.com/sinee.h/">
