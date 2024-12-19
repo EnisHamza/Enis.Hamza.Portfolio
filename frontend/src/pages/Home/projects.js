@@ -9,7 +9,7 @@ const Projects = () => {
     <div className="">
       <SectionTitle title="Projects" />
       <div className="py-10 sm:flex-col">
-        <div className="flex flex-row border-t-4 overflow-x-scroll border-[#135e4c82] justify-around sm:flex-row sm:overflow-x-scroll sm:w-full">
+        <div className="flex flex-row border-t-4 overflow-x-scroll border-[#135e4c82] justify-around sm:flex-row sm:overflow-visible sm:overflow-x-scroll sm:w-full">
           {projects.map((project, index) => (
             <div
               key={project.title}
@@ -34,7 +34,7 @@ const Projects = () => {
           <img
             src={projects[selectedItemIndex].image}
             alt="projekt"
-            className="h-full w-4/6 border rounded-xl"
+            className="h-full w-4/6 sm:w-full border rounded-xl"
           />
         </div>
         <p className="text-tertiary text-center">

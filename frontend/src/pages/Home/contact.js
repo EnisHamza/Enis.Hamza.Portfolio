@@ -17,7 +17,7 @@ const Contact = () => {
       <SectionTitle title="Meet Me" />
       <div className="flex flex-row items-center mx-4 px-4 sm:items-center sm:flex-col">
         {/* User Info Section */}
-        <div className="flex flex-col items-center lg:text-center lg:w-full h-auto gap-4 sm:items-center sm:ml-0 mt-10">
+        <div className="flex flex-col items-center lg:text-center lg:w-full h-auto gap-4 sm:items-center sm:mx-6 sm:ml-0 mt-10">
           <h1 className="text-secondary text-xl font-bold">{`{`}</h1>
           {Object.keys(user).map(
             (key) =>
