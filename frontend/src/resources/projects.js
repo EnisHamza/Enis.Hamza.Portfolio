@@ -33,8 +33,8 @@ export const projects = [
     image: "/images/kursonomia.png",
     description:
       "Kursonomia connects learners with a variety of courses and educators, making it easy to find the right learning opportunities. With flexible options and a user-friendly design, it’s all about enhancing your educational experience.",
-    link: "/",
-    linkgit: "/",
+    link: "https://kursonomia.onrender.com/",
+    linkgit: "https://github.com/EnisHamza/Kursonomia",
   },
 
   {
