@@ -13,7 +13,7 @@ function Experience() {
         <div className="flex flex-col gap-10 w-3/5 sm:flex-row sm:overflow-x-scroll sm:w-full">
           {experience.map((exp, index) => (
             <div
-              key={exp.period} // Added key prop here
+              key={exp.period}
               onClick={() => {
                 setSelectedItemIndex(index);
               }}

@@ -12,7 +12,7 @@ const Projects = () => {
         <div className="flex flex-row border-t-4 overflow-x-scroll border-[#135e4c82] justify-around sm:flex-row sm:overflow-x-scroll sm:w-full">
           {projects.map((project, index) => (
             <div
-              key={project.title} // Added key prop here
+              key={project.title}
               onClick={() => {
                 setSelectedItemIndex(index);
               }}
