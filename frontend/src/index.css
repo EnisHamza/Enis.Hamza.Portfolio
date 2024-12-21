@@ -8,21 +8,35 @@
   font-family: "Montserrat", sans-serif;
 }
 
-/* width */
+/* Custom Scrollbar Styles */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 8px; /* Width of the scrollbar */
+  height: 8px; /* Horizontal scrollbar height */
 }
 
-/* Track */
+/* Scrollbar Track (background) */
 ::-webkit-scrollbar-track {
   background-color: #0f172a;
 }
 
-/* Handle */
+/* Scrollbar Handle (thumb) */
 ::-webkit-scrollbar-thumb {
   background: #013f3c7f;
 }
 
+/* Styles for hover state of the scrollbar thumb */
+::-webkit-scrollbar-thumb:hover {
+  background: #007f73;
+}
+
+/* Make scrollbar more visible on mobile */
+@media (max-width: 767px) {
+  .overflow-container {
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+  }
+}
+
+/* i tag styles */
 i {
   cursor: pointer;
 }
@@ -32,6 +46,7 @@ i:hover {
   font-size: 24px;
 }
 
+/* Animation classes for fading */
 .s {
   animation: s 1s infinite;
 }
@@ -85,6 +100,7 @@ i:hover {
   }
 }
 
+/* Input and textarea styling */
 input,
 textarea {
   height: 40px;

@@ -9,7 +9,7 @@ const Projects = () => {
     <div className="">
       <SectionTitle title="Projects" />
       <div className="py-10 sm:flex-col">
-        <div className="flex flex-row border-t-4 overflow-x-scroll border-[#135e4c82] justify-around sm:flex-row sm:overflow-visible sm:overflow-x-scroll sm:w-full">
+        <div className="flex flex-row border-t-4 overflow-x-scroll border-[#135e4c82] justify-around sm:flex-row sm:overflow-x-scroll sm:w-full">
           {projects.map((project, index) => (
             <div
               key={project.title}
