@@ -9,26 +9,29 @@ const Projects = () => {
     <div className="">
       <SectionTitle title="Projects" />
       <div className="py-10 sm:flex-col">
-        <div className="flex flex-row border-t-4 overflow-x-scroll border-[#135e4c82] justify-around sm:flex-row sm:overflow-x-scroll sm:w-full">
-          {projects.map((project, index) => (
-            <div
-              key={project.title}
-              onClick={() => {
-                setSelectedItemIndex(index);
-              }}
-              className="cursor-pointer"
-            >
-              <h1
-                className={`text-lg px-24 py-2 ${
-                  selectedItemIndex === index
-                    ? "text-tertiary border-tertiary border-x-4 bg-[#1a7f5a31]"
-                    : " text-white"
-                }`}
+        {/* Make the container wider to ensure horizontal scrolling */}
+        <div className="overflow-x-auto w-full">
+          <div className="flex flex-row border-t-4 border-[#135e4c82] justify-start sm:flex-row sm:overflow-x-auto">
+            {projects.map((project, index) => (
+              <div
+                key={project.title}
+                onClick={() => {
+                  setSelectedItemIndex(index);
+                }}
+                className="cursor-pointer flex-shrink-0"
               >
-                {project.title}
-              </h1>
-            </div>
-          ))}
+                <h1
+                  className={`text-lg px-24 py-2 ${
+                    selectedItemIndex === index
+                      ? "text-tertiary border-tertiary border-x-4 bg-[#1a7f5a31]"
+                      : "text-white"
+                  }`}
+                >
+                  {project.title}
+                </h1>
+              </div>
+            ))}
+          </div>
         </div>
         <div className="flex flex-row py-20 justify-center gap-10 sm:justify-center">
           <img
