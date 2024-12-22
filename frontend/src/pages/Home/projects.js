@@ -11,7 +11,7 @@ const Projects = () => {
       <div className="py-10 sm:flex-col">
         {/* Make the container wider to ensure horizontal scrolling */}
         <div className="overflow-x-auto w-full">
-          <div className="flex flex-row border-t-4 sm:border-t-4 overflow-x-auto border-[#135e4c82] justify-around sm:justify-start sm:flex-row sm:overflow-x-auto">
+          <div className="flex flex-row border-t-4 sm:border-t-4 overflow-x-auto border-[#135e4c82] justify-around sm:justify-start sm:flex-row sm:overflow-x-visible">
             {projects.map((project, index) => (
               <div
                 key={project.title}
