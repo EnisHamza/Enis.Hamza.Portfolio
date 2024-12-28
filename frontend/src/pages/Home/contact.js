@@ -8,7 +8,7 @@ const Contact = () => {
     age: 22,
     gender: "Male",
     email: "Eniss.hamza@gmail.com",
-    mobile: "+383 (49)-607-665",
+    mobile: "+383 (49) 607-665",
     country: "Kosova",
   };
 
