@@ -6,7 +6,7 @@ export const projects = [
     description:
       "Two Feet In is your personal travel companion, capturing every step of your journey around the globe. Whether you're exploring new cities or revisiting familiar places, Two Feet In maps your adventures, creating a visual timeline of the world you've explored.",
     link: "https://two-feet-in.netlify.app/",
-    linkgit: "/https://github.com/EnisHamza/Two-Feet-In",
+    linkgit: "https://github.com/EnisHamza/Two-Feet-In",
   },
 
   {
