@@ -19,8 +19,8 @@ const Intro = () => {
         </p>
         <div className="flex items-center space-x-12 py-4 sm:mx-auto">
           <a
-            href="/EnisHamza.pdf"
-            download="EnisHamza_CV.pdf"
+            href="/EnisHamzaCV.pdf"
+            download="EnisHamzaCV.pdf"
             className="border-2 border-tertiary text-tertiary px-10 py-3 rounded inline-block"
           >
             Download CV
