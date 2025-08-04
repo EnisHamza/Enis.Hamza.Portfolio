@@ -44,10 +44,10 @@ const Projects = () => {
           {projects[selectedItemIndex].description}
         </p>
         <p className="text-tertiary text-center">
-          <a href={projects[selectedItemIndex].linkgit}>
+          <a href={projects[selectedItemIndex].linkgit} target="_blank">
             <i className="ri-github-line text-gray-500 text-4xl mr-5"></i>
           </a>
-          <a href={projects[selectedItemIndex].link}>
+          <a href={projects[selectedItemIndex].link} target="_blank">
             <i className="ri-global-fill text-gray-500 text-4xl"></i>
           </a>
         </p>
