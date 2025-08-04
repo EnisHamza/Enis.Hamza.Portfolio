@@ -13,4 +13,11 @@ export const experience = [
     description:
       "As a Back Office Intern at IPKO Telecommunications, I played a crucial role in supporting the technical and operational processes where I Assisted in addressing and resolving technical needs related to back-office operations, ensuring that processes ran smoothly and efficiently, Ensured the security and accuracy of all data and information handled, implementing protocols to safeguard sensitive information and maintain high standards of data integrity.",
   },
+  {
+    company: "Tratics LLC",
+    title: "Data Analyst",
+    period: "April 2025 - Current",
+    description:
+      "In my role as a Data Analyst at Tratics, I performed data cleaning and preparation to ensure accuracy and consistency in large datasets. I identified and resolved data quality issues, helping to improve the reliability of reporting and analysis.",
+  },
 ];
